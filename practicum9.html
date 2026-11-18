@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>QuizPulse Animation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  background-color: lightyellow;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: purple;
+}
+.banner {
+  background-color: purple;
+  overflow: hidden;
+  padding: 15px 0;
+}
+.slide-text {
+  color: gold;
+  font-size: 30px;
+  font-weight: bold;
+  white-space: nowrap;
+  position: relative;
+  animation-name: slide;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes slide {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.pulse {
+  display: block;
+  margin: 40px auto;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: pink;
+  border: 3px solid purple;
+  border-radius: 10px;
+  animation: grow 1s infinite;
+}
+@keyframes grow {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+</style>
+</head>
+<body>
+<h1>QuizPulse</h1>
+<div class="banner">
+  <div class="slide-text">Welcome to QuizPulse - Learn, Play and Win!</div>
+</div>
+<button class="pulse">Start Quiz</button>
+</body>
+</html>
